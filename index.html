@@ -3,134 +3,170 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>مؤسسة ركن الشيوخ | بهارات وتمور وعطارة في أبها ومحايل عسير</title>
-
-<meta name="description" content="مؤسسة ركن الشيوخ توفر أجود أنواع البهارات والعطارة والتمور الفاخرة في أبها ومحايل عسير. جودة عالية وأسعار منافسة.">
-<meta name="keywords" content="بهارات, عطارة, تمور, أبها, محايل عسير, ركن الشيوخ">
-<meta name="author" content="ROKON AL SHIUOKH">
-
-<link rel="canonical" href="https://yourdomain.com/">
+<title>ROKON AL SHIUOKH | ركن الشيوخ</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
+/* ========== Base ========== */
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Cairo',sans-serif;background:#f7f3ed;direction:rtl;color:#333;}
+body{font-family:'Cairo',sans-serif;direction:rtl;background:#fff8f2;color:#333;line-height:1.6;}
+a{text-decoration:none;transition:.3s;} a:hover{opacity:.85;}
+.hidden{display:none;}
 
-header{background:linear-gradient(135deg,#5d3a1a,#a67c52);color:#fff;text-align:center;padding:50px 20px;}
-header h1{font-size:38px;margin-bottom:10px;}
-header h2{font-weight:400;letter-spacing:3px;}
+/* ========== Header ========== */
+header{background:linear-gradient(135deg,#5d3a1a,#a67c52);color:#fff;text-align:center;padding:60px 20px;position:relative;overflow:hidden;}
+header::after{content:"";position:absolute;width:200%;height:200%;background:rgba(255,255,255,0.06);top:-50%;left:-50%;transform:rotate(25deg);animation:float 8s infinite linear;}
+@keyframes float{0%{transform:rotate(25deg) translateX(0);}50%{transform:rotate(25deg) translateX(20px);}100%{transform:rotate(25deg) translateX(0);}}
+header h1{font-size:42px;font-weight:700;}
+header h2{font-weight:400;font-size:22px;letter-spacing:3px;}
+.lang-switch{position:absolute;top:20px;left:20px;background:#ffd27f;color:#3b2a1a;padding:10px 18px;border-radius:8px;font-weight:700;cursor:pointer;transition:.3s;}
+.lang-switch:hover{background:#a67c52;color:#fff;}
 
-nav{background:#3b2a1a;text-align:center;padding:15px;}
-nav a{color:#fff;text-decoration:none;margin:0 15px;font-weight:bold;transition:.3s;}
-nav a:hover{color:#ffd27f;}
+/* ========== Navigation ========== */
+nav{background:#3b2a1a;display:flex;justify-content:center;flex-wrap:wrap;padding:15px;gap:20px;}
+nav a{color:#fff;font-weight:600;padding:12px 18px;border-radius:8px;position:relative;}
+nav a::after{content:"";position:absolute;width:0;height:2px;background:#ffd27f;bottom:0;left:50%;transform:translateX(-50%);transition:.3s;}
+nav a:hover::after{width:100%;} nav a:hover{background:#a67c52;color:#fff;}
 
-.hero{
-background:url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d') center/cover no-repeat;
-height:65vh;display:flex;align-items:center;justify-content:center;text-align:center;
-color:#fff;position:relative;}
-.hero::after{content:"";position:absolute;width:100%;height:100%;background:rgba(0,0,0,.55);}
-.hero h3{position:relative;font-size:34px;z-index:1;}
+/* ========== Hero ========== */
+.hero{background:url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d') center/cover no-repeat;height:70vh;display:flex;justify-content:center;align-items:center;position:relative;color:#fff;text-align:center;overflow:hidden;}
+.hero::after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);mix-blend-mode:multiply;}
+.hero h3{position:relative;font-size:38px;font-weight:700;max-width:900px;animation:fadeInUp 1.5s ease forwards;opacity:0;}
+@keyframes fadeInUp{0%{transform:translateY(30px);opacity:0;}100%{transform:translateY(0);opacity:1;}}
 
-.section{padding:80px 20px;text-align:center;}
-.section h2{font-size:30px;margin-bottom:50px;color:#5d3a1a;}
+/* ========== Sections ========== */
+.section{padding:90px 20px;text-align:center;}
+.section h2{font-size:34px;margin-bottom:50px;color:#5d3a1a;position:relative;}
+.section h2::after{content:"";width:90px;height:3px;background:#a67c52;display:block;margin:12px auto 0;border-radius:2px;}
 
-.products{display:flex;flex-wrap:wrap;justify-content:center;gap:30px;}
-.card{background:#fff;width:300px;padding:30px;border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.08);transition:.4s;}
-.card:hover{transform:translateY(-12px);}
-.card h4{margin-bottom:15px;color:#a67c52;font-size:22px;}
+/* ========== Products ========== */
+.products{display:flex;flex-wrap:wrap;justify-content:center;gap:35px;}
+.card{background:#fff;width:300px;padding:35px 25px;border-radius:25px;box-shadow:0 15px 35px rgba(0,0,0,0.12);transition:transform .5s, box-shadow .5s;cursor:pointer;}
+.card:hover{transform:translateY(-15px) scale(1.05);box-shadow:0 20px 50px rgba(0,0,0,0.2);}
+.card h4{font-size:24px;margin-bottom:15px;color:#a67c52;}
+.card p{font-size:17px;color:#555;}
 
-.contact-box{background:#fff;padding:50px;border-radius:25px;max-width:1100px;margin:auto;
-box-shadow:0 15px 40px rgba(0,0,0,.08);}
-.contact-info{font-size:20px;margin-bottom:40px;}
-.contact-info p{margin:12px 0;}
-.contact-info a{color:#5d3a1a;text-decoration:none;font-weight:bold;}
+/* ========== Contact ========== */
+.contact-box{background:#fff3e6;padding:55px 40px;border-radius:30px;max-width:1150px;margin:auto;box-shadow:0 20px 50px rgba(0,0,0,0.1);}
+.contact-box p{font-size:18px;margin:15px 0;}
+.contact-box a{color:#5d3a1a;font-weight:bold;transition:.3s;}
+.contact-box a:hover{color:#a67c52;text-decoration:underline;}
+.social p i{color:#ffcc00;margin-left:12px;}
 
-.branches{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:30px;}
-.branch-card{background:#f9f4ec;padding:20px;border-radius:20px;
-box-shadow:0 8px 20px rgba(0,0,0,.05);}
-.branch-card h3{margin-bottom:15px;color:#5d3a1a;}
-.branch-card iframe{width:100%;height:250px;border-radius:15px;border:0;margin-bottom:10px;}
-.branch-card a{display:inline-block;background:#5d3a1a;color:#fff;
-padding:10px 20px;border-radius:50px;text-decoration:none;font-size:14px;transition:.3s;}
-.branch-card a:hover{background:#a67c52;}
+/* ========== Maps ========== */
+.maps{margin-top:50px;display:grid;grid-template-columns:1fr 1fr;gap:35px;}
+.map-box{background:#fff;padding:25px;border-radius:25px;box-shadow:0 15px 40px rgba(0,0,0,0.15);transition:transform .4s, box-shadow .4s;}
+.map-box:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 25px 60px rgba(0,0,0,0.2);}
+.map-box h3{margin-bottom:15px;color:#5d3a1a;font-size:20px;}
+.map-box iframe{width:100%;height:300px;border-radius:15px;border:0;}
+.map-box p a{display:inline-block;margin-top:10px;background:#5d3a1a;color:#fff;padding:10px 20px;border-radius:50px;font-size:15px;transition:.3s;}
+.map-box p a:hover{background:#a67c52;}
 
-footer{background:#3b2a1a;color:#fff;text-align:center;padding:25px;margin-top:60px;}
+/* ========== Footer ========== */
+footer{background:#3b2a1a;color:#fff;text-align:center;padding:30px;font-size:16px;}
 
-@media(max-width:900px){.branches{grid-template-columns:1fr;}}
+/* ========== Responsive ========== */
+@media(max-width:900px){.products{flex-direction:column;align-items:center;}.maps{grid-template-columns:1fr;}}
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>مؤسسة ركن الشيوخ</h1>
-<h2>ROKON AL SHIUOKH</h2>
+    <h1>مؤسسة ركن الشيوخ</h1>
+    <h2>ROKON AL SHIUOKH</h2>
+    <div class="lang-switch" onclick="toggleLang()">EN / AR</div>
 </header>
 
 <nav>
-<a href="#">الرئيسية</a>
-<a href="#products">منتجاتنا</a>
-<a href="#contact">الفروع والتواصل</a>
+    <a href="#">الرئيسية</a>
+    <a href="#products">منتجاتنا</a>
+    <a href="#contact">تواصل معنا</a>
 </nav>
 
+<!-- Hero -->
 <section class="hero">
-<h3>أجود أنواع البهارات والعطارة والتمور الفاخرة في أبها ومحايل عسير</h3>
+    <h3 id="hero-ar">أجود أنواع البهارات والعطارة والتمور الفاخرة</h3>
+    <h3 id="hero-en" class="hidden">The Finest Spices, Herbs & Premium Dates</h3>
 </section>
 
+<!-- Products -->
 <section class="section" id="products">
-<h2>منتجاتنا</h2>
-<div class="products">
-<div class="card">
-<h4>البهارات</h4>
-<p>بهارات طازجة مختارة بعناية لتعطي نكهة أصيلة.</p>
-</div>
-<div class="card">
-<h4>العطارة</h4>
-<p>أعشاب وزيوت طبيعية عالية الجودة.</p>
-</div>
-<div class="card">
-<h4>التمور</h4>
-<p>أجود أنواع التمور السعودية الفاخرة.</p>
-</div>
-</div>
+    <h2 id="title-ar">منتجاتنا</h2>
+    <h2 id="title-en" class="hidden">Our Products</h2>
+    <div class="products">
+        <div class="card">
+            <h4 id="p1-ar">البهارات</h4>
+            <h4 id="p1-en" class="hidden">Spices</h4>
+            <p id="p1-desc-ar">بهارات طازجة مختارة بعناية لتعطي نكهة أصيلة.</p>
+            <p id="p1-desc-en" class="hidden">Fresh selected spices for authentic flavor.</p>
+        </div>
+        <div class="card">
+            <h4 id="p2-ar">العطارة</h4>
+            <h4 id="p2-en" class="hidden">Herbs & Oils</h4>
+            <p id="p2-desc-ar">أعشاب وزيوت طبيعية عالية الجودة.</p>
+            <p id="p2-desc-en" class="hidden">High-quality natural herbs and oils.</p>
+        </div>
+        <div class="card">
+            <h4 id="p3-ar">التمور</h4>
+            <h4 id="p3-en" class="hidden">Premium Dates</h4>
+            <p id="p3-desc-ar">أجود أنواع التمور السعودية الفاخرة.</p>
+            <p id="p3-desc-en" class="hidden">The finest premium Saudi dates.</p>
+        </div>
+    </div>
 </section>
 
+<!-- Contact -->
 <section class="section" id="contact">
-<h2>الفروع والتواصل</h2>
+    <h2 id="contact-ar">تواصل معنا</h2>
+    <h2 id="contact-en" class="hidden">Contact Us</h2>
+    <div class="contact-box">
+        <p id="sale-ar"><strong>📞 المبيعات:</strong> <a href="tel:0554042101">0554042101</a></p>
+        <p id="sale-en" class="hidden"><strong>📞 Sales:</strong> <a href="tel:0554042101">0554042101</a></p>
+        <p id="admin-ar"><strong>📞 الإدارة:</strong> <a href="tel:0556073321">0556073321</a></p>
+        <p id="admin-en" class="hidden"><strong>📞 Administration:</strong> <a href="tel:0556073321">0556073321</a></p>
+        <p id="email-ar"><strong>📧 البريد الإلكتروني:</strong> <a href="mailto:rokn_alshiuokhl@gmail.com">rokn_alshiuokhl@gmail.com</a></p>
+        <p id="email-en" class="hidden"><strong>📧 Email:</strong> <a href="mailto:rokn_alshiuokhl@gmail.com">rokn_alshiuokhl@gmail.com</a></p>
 
-<div class="contact-box">
+        <div class="social">
+            <p><i class="fa-brands fa-snapchat"></i> 
+                <a href="https://www.snapchat.com/add/rokon_alshiuokh" target="_blank">Snapchat: rokon_alshiuokh</a>
+            </p>
+        </div>
 
-<div class="contact-info">
-<p>📞 المبيعات: <a href="tel:0554042101">0554042101</a></p>
-<p>📞 الإدارة: <a href="tel:0556073321">0556073321</a></p>
-<p>📧 البريد: <a href="mailto:rokn_alshiuokhl@gmail.com">rokn_alshiuokhl@gmail.com</a></p>
-<p>Snapchat: rokon_alshiuokh</p>
-</div>
-
-<div class="branches">
-
-<div class="branch-card">
-<h3>📍 فرع محايل عسير</h3>
-<iframe src="https://maps.google.com/maps?q=محايل%20عسير&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
-<a href="https://maps.app.goo.gl/UDV2MD4FgohsGTxw8" target="_blank">فتح الملاحة</a>
-</div>
-
-<div class="branch-card">
-<h3>📍 فرع أبها</h3>
-<iframe src="https://maps.google.com/maps?q=ابها&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
-<a href="https://maps.app.goo.gl/fy8wuKeAMQvx8VPt9" target="_blank">فتح الملاحة</a>
-</div>
-
-</div>
-</div>
+        <div class="maps">
+            <div class="map-box">
+                <h3 id="map1-ar">📍 فرع محايل عسير</h3>
+                <h3 id="map1-en" class="hidden">📍 Mahayel Asir Branch</h3>
+                <iframe src="https://maps.app.goo.gl/QxwM6L4Vh1MXTpJC9"></iframe>
+                <p><a href="https://maps.app.goo.gl/QxwM6L4Vh1MXTpJC9" target="_blank">فتح في خرائط قوقل</a></p>
+            </div>
+            <div class="map-box">
+                <h3 id="map2-ar">📍 فرع أبها</h3>
+                <h3 id="map2-en" class="hidden">📍 Abha Branch</h3>
+                <iframe src="https://maps.app.goo.gl/bM1jTJ4yMDeuggpW7"></iframe>
+                <p><a href="https://maps.app.goo.gl/bM1jTJ4yMDeuggpW7" target="_blank">فتح في خرائط قوقل</a></p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <footer>
-© 2026 ROKON AL SHIUOKH - جميع الحقوق محفوظة
+    © 2026 ROKON AL SHIUOKH - جميع الحقوق محفوظة
 </footer>
+
+<script>
+// ======= Toggle Language =======
+function toggleLang(){
+    const elements = document.querySelectorAll('[id$="-ar"], [id$="-en"]');
+    elements.forEach(el=>{
+        el.classList.toggle('hidden');
+    });
+    document.body.dir = document.body.dir === 'rtl' ? 'ltr' : 'rtl';
+}
+</script>
 
 </body>
 </html>
